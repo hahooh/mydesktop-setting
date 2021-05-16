@@ -60,4 +60,5 @@ let g:netrw_liststyle=3 " tree view
 " need to figure out command from other modes
 
 " yank and paste using X11 system clipboard
+" to use this need to have vim-gtx (gvim)
 set clipboard=unnamedplus
