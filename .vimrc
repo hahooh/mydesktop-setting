@@ -40,11 +40,12 @@ set wildmenu
 " ^] to go to definetion
 " g] to find reference
 
-" auth complete
+" auto complete
 " ^n -> from any tags
 " ^x^n -> from current tags
 " ^x^f -> auto complete file path
 " ^x^] -> for tags only
+" ^x ^o -> default auto complete key bind from vim
 " ^t to jumpback
 
 " file browsing config
