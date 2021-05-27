@@ -1,3 +1,13 @@
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Initialize plugin system
+call plug#end()
+
 set number " Show line number
 set relativenumber " Show relative number
 set autoindent
@@ -19,7 +29,6 @@ set nowrap
 set noswapfile
 set nocompatible
 syntax enable
-filetype plugin on
 
 " find files thought path
 " use :find to find file
@@ -36,6 +45,7 @@ set wildmenu
 " ^x^n -> from current tags
 " ^x^f -> auto complete file path
 " ^x^] -> for tags only
+" ^t to jumpback
 
 " file browsing config
 let g:netrw_banner=0 " disable banner
@@ -62,3 +72,28 @@ let g:netrw_liststyle=3 " tree view
 " yank and paste using X11 system clipboard
 " to use this need to have vim-gtx (gvim)
 set clipboard=unnamedplus
+
+" automatic closing brackets and quotations
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+
+filetype plugin indent on
+
+set autowrite
+
+" Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+" Status line types/signatures
+let g:go_auto_type_info = 1
