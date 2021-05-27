@@ -4,6 +4,8 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -40,12 +42,11 @@ set wildmenu
 " ^] to go to definetion
 " g] to find reference
 
-" auto complete
+" auth complete
 " ^n -> from any tags
 " ^x^n -> from current tags
 " ^x^f -> auto complete file path
 " ^x^] -> for tags only
-" ^x ^o -> default auto complete key bind from vim
 " ^t to jumpback
 
 " file browsing config
@@ -98,3 +99,5 @@ let g:go_fmt_command = "goimports"
 
 " Status line types/signatures
 let g:go_auto_type_info = 1
+
+set rtp+=/usr/local/opt/fzf
