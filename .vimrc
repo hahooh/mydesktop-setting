@@ -100,4 +100,5 @@ let g:go_fmt_command = "goimports"
 " Status line types/signatures
 let g:go_auto_type_info = 1
 
-set rtp+=/usr/local/opt/fzf
+" for mac
+" set rtp+=/usr/local/opt/fzf
